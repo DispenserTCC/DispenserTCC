@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace DispenserTCC
 {
-    public partial class About : Page
+    public partial class Configuracoes : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
