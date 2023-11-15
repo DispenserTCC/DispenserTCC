@@ -1,29 +1,32 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="DispenserTCC.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="DispenserTCC.Login" MasterPageFile="~/Site.Master" %>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="CSS/Estilo.css" />
-    <style></style>
-  </head>
-  <body>
-    <div class="login-container">
-      <h2>Login</h2>
-      <form action="process_login.php" method="POST">
-        <div class="form-group">
-          <label for="username">Númeração do Dispenser:</label>
-          <input type="number" id="user" name="user" required />
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <!DOCTYPE html>
+    <html lang="pt-br">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="CSS/Estilo.css" />
+        <style></style>
+      </head>
+      <body>
+        <div class="login-container">
+          <h2>Login</h2>
+          <form action="process_login.php" method="POST">
+            <div class="form-group">
+              <label for="username">Email:</label>
+              <%--<input type="number" id="user" name="user" required />--%>
+                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>  
+            </div>
+            <div class="form-group">
+              <label for="password">Senha:</label>
+                <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
+            </div>
+              <asp:Button id="btnEntrar" CssClass="login-button" OnClick="btnEntrar_Click" runat="server" text="Entrar"/>
+              <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Cadastre-se"/>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="password">Senha:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <button type="submit" class="login-button">Login</button>
-        <a class="login-button" href="cadastro.html">Cadastrar-se</a>
-      </form>
-    </div>
-  </body>
-</html>
+      </body>
+    </html>
+</asp:Content>

@@ -1,46 +1,41 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastroUsuario.aspx.cs" Inherits="DispenserTCC.CadastroUsuario" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CadastroUsuario.aspx.cs" Inherits="DispenserTCC.CadastroUsuario" MasterPageFile="~/Site.Master"%>
 
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="CSS/Estilo.css" />
-  </head>
-  <body>
-    <div class="login-container">
-      <h2>Cadastro do Usuário</h2>
-      <form action="process_login.php" method="POST">
-        <div class="form-group">
-          <label for="username">Nome Completo:</label>
-          <input type="text" id="user" name="user" required />
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <!DOCTYPE html>
+    <html lang="pt-br">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro</title>
+        <link rel="stylesheet" href="CSS/Estilo.css" />
+      </head>
+      <body>
+        <div class="login-container">
+          <h2>Cadastro do Usuário</h2>
+          <form action="process_login.php" method="POST">
+            <div class="form-group">
+              <label for="username">Nome Completo:</label>
+                <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
+              <label for="username">CPF:</label>
+                <asp:TextBox ID="txtNumDocumento" runat="server" Placeholder="XXX.XXX.XXX-XX"></asp:TextBox>
+            </div>
+            <div class="form-group">
+              <label for="phone">Número de telefone:</label>
+                <asp:TextBox ID="txtNumTelefone" runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
+              <label for="phone">Email:</label>
+                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+            </div>
+            <div class="form-group">
+              <label for="password">Senha:</label>
+                <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
+            </div>
+            <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Cadastrar"/>
+          </form>
         </div>
-        <div class="form-group">
-          <label for="username">CPF:</label>
-          <input
-            type="tel"
-            id="document"
-            name="inputdocument"
-            placeholder="XXX.XXX.XXX-XX"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="username">Data de Nascimento:</label>
-          <input type="date" id="birthday" name="birthday" required />
-        </div>
-        <div class="form-group">
-          <label for="phone">Número de telefone:</label>
-          <input type="text" id="phone" name="phone" maxlength="12" required />
-        </div>
-        <div class="form-group">
-          <label for="password">Senha:</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-        <button type="submit" class="login-button">Cadastrar-se</button>
-        <a class="login-button" href="login.html">Login</a>
-      </form>
-    </div>
-  </body>
-</html>
+      </body>
+    </html>
+</asp:Content>

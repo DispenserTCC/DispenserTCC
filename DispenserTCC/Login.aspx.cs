@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DispenserTCC.Objetos;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,22 @@ namespace DispenserTCC
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btnEntrar_Click(object sender, EventArgs e)
+        {
+            Usuarios obj = new Usuarios();
+            var nome = obj.VerificaUsuario(txtEmail.Text, txtSenha.Text);
+
+            if (!String.IsNullOrEmpty(nome))
+            {
+                Response.Redirect("Configuracoes.aspx");
+            }
+        }
+
+        protected void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CadastroUsuario.aspx");
         }
     }
 }
