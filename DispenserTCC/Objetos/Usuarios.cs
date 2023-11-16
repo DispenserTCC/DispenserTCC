@@ -5,7 +5,9 @@ using System.Linq;
 using System.Web;
 using Microsoft.Ajax.Utilities;
 using System.Security.Cryptography;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
+using System.Web.Helpers;
+using System.Data.SqlClient;
 
 namespace DispenserTCC.Objetos
 {
@@ -29,7 +31,7 @@ namespace DispenserTCC.Objetos
             MySqlConnection conn = new MySqlConnection(strConexao);
             conn.Open();
 
-            MySqlCommand cmd = new MySqlCommand("Select Nome from Usuario where Email = '" + email + "' AND Senha = '" + senha + "'", conn);
+            MySqlCommand cmd = new MySqlCommand("Select Nome from Usuarios where Email = '" + email + "' AND Senha = '" + senha + "'", conn);
 
             MySqlDataReader dr = cmd.ExecuteReader();
 
@@ -44,12 +46,39 @@ namespace DispenserTCC.Objetos
 
         public void InserirUsuario(string nome, string numDocumento, string numTelefone, string email, string senha)
         {
+            var id = ObterIdUsuario();
+
             MySqlConnection conn = new MySqlConnection(strConexao);
             conn.Open();
 
-            MySqlCommand cmd = new MySqlCommand("INSERT INTO Usuario Values ('" + nome + "', '" + numDocumento + "', '" + numTelefone + "', '" + email + "', '" + senha + "')", conn);
+            MySqlCommand cmd = new MySqlCommand("INSERT INTO Usuarios Values (" + id + ", '" + nome + "', '" + numDocumento + "', '" + numTelefone + "', '" + email + "', '" + senha + "')", conn);
 
             cmd.ExecuteNonQuery();
+        }
+
+        public int ObterIdUsuario()
+        {
+            MySqlConnection conn = new MySqlConnection(strConexao);
+            conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand("SELECT MAX(Id) from Usuarios", conn);
+
+            MySqlDataReader dr = cmd.ExecuteReader();
+
+            int id = 0;
+            while (dr.Read())
+            {
+                if(dr.FieldCount == 0)
+                {
+                    id = 0;
+                }
+                else
+                {
+                    id = dr.GetInt32(0);
+                }
+            }
+
+            return id + 1;
         }
     }
 }
