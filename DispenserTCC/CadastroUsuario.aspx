@@ -23,17 +23,18 @@
             </div>
             <div class="form-group">
               <label for="phone">Número de telefone:</label>
-                <asp:TextBox ID="txtNumTelefone" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNumTelefone" runat="server" Placeholder="(XX) X.XXXX-XXXX"></asp:TextBox>
             </div>
             <div class="form-group">
               <label for="phone">Email:</label>
-                <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" Placeholder="EX:seuemail@gmail.com"></asp:TextBox>
             </div>
             <div class="form-group">
               <label for="password">Senha:</label>
                 <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
             </div>
-            <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Cadastrar"/>
+            <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Login"/>
+            <asp:Button id="btnSalvar" CssClass="login-button" OnClick="btnSalvar_Click" runat="server" text="Cadastrar"/>
           </form>
         </div>
       </body>

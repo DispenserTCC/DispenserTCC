@@ -15,30 +15,30 @@ namespace DispenserTCC
     {
 
         /// <summary>
-        /// Controle btnGerarRelatorio.
+        /// Controle btnRelatorio.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGerarRelatorio;
+        protected global::System.Web.UI.WebControls.Button btnRelatorio;
 
         /// <summary>
-        /// Controle btnProgramarDispensador.
+        /// Controle btnDispenser.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnProgramarDispensador;
+        protected global::System.Web.UI.WebControls.Button btnDispenser;
 
         /// <summary>
-        /// Controle btnLogout.
+        /// Controle btnSair.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Para modificar, mova a declaração de campo do arquivo de designer a um arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogout;
+        protected global::System.Web.UI.WebControls.Button btnSair;
     }
 }

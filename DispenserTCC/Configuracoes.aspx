@@ -12,22 +12,33 @@
     <div class="login-container">
       <h2>Configurações</h2>
       <form action="process_login.php" method="POST">
-        <div class="form-group">
-          <label for="username">Selecione o dispenser:</label>
-          <select class="selection-button" name="product" id="product">
-            <option value="1">Dispenser 1</option>
-            <option value="2">Dispenser 2</option>
-            <option value="3">Dispenser 3</option>
-            <option value="4">Dispenser 4</option>
-          </select>
+                  <div class="form-group">
+          <label for="username">Nome: </label>
+            <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
         </div>
         <div class="form-group">
-          <label for="username">Formato do medicamento:</label>
-          <select class="selection-button" name="type" id="type">
-            <option value="comprido">Comprido</option>
-            <option value="capsula">Cápsula</option>
-            <option value="dragea">Drágea</option>
-          </select>
+          <label for="username">Digite qual o dispenser: </label>
+            <asp:TextBox ID="txtDispenser" runat="server" Placeholder="1, 2, 3 ou 4"></asp:TextBox>
+        </div>
+        <div class="form-group">
+          <label for="username">Nome do medicamento: </label>
+           <asp:TextBox ID="txtMedicamento" runat="server" Placeholder="Ex: Dorflex"></asp:TextBox>
+        </div>
+        <div class="form-group">
+          <label for="username">Quantidade: </label>
+           <asp:TextBox ID="txtQuantidade" runat="server" Placeholder="Total:"></asp:TextBox>
+        </div>
+        <div class="form-group">
+          <label for="username">Data:</label>
+            <asp:TextBox ID="txtData_prescricao" runat="server"></asp:TextBox>
+        </div>
+        <div class="form-group">
+          <label for="username">Hora:</label>
+            <asp:TextBox ID="txtHora_prescricao" runat="server" ></asp:TextBox>
+        </div>
+        <div>
+          <asp:Button id="btnSalvar" CssClass="login-button" OnClick="btnSalvar_Click" runat="server" text="Feito"/>
+        </div>
         </div>
       </form>
     </div>
