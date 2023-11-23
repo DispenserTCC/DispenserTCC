@@ -1,5 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Relatorio.aspx.cs" Inherits="DispenserTCC.Relatorio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Relatorio.aspx.cs" Inherits="DispenserTCC.Relatorio" MasterPageFile="~/Site.Master" %>
 
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,12 +14,12 @@
       <h2>Gerar Relatório</h2>
       <form action="process_login.php" method="POST">
         <div class="form-group">
-          <label for="username"
-            >Para gerar o relatório atualizado clique no botão abaixo:</label
-          >
+          <label for="username">
+              Para gerar o relatório atualizado clique no botão abaixo:</label>
         </div>
-        <button type="submit" class="login-button">Relatório</button>
+          <asp:Button id="btnGerarRelatorio" CssClass="menu1" OnClick="btnGerarRelatorio_Click" runat="server" text="Baixar Relatório"/>
       </form>
     </div>
   </body>
 </html>
+</asp:Content>

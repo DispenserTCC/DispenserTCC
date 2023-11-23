@@ -33,8 +33,7 @@
               <label for="password">Senha:</label>
                 <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
             </div>
-            <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Login"/>
-            <asp:Button id="btnSalvar" CssClass="login-button" OnClick="btnSalvar_Click" runat="server" text="Cadastrar"/>
+            <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Criar Usuário"/>
           </form>
         </div>
       </body>

@@ -54,6 +54,8 @@ namespace DispenserTCC.Objetos
             MySqlCommand cmd = new MySqlCommand("INSERT INTO Usuarios Values (" + id + ", '" + nome + "', '" + numDocumento + "', '" + numTelefone + "', '" + email + "', '" + senha + "')", conn);
 
             cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
 
         public int ObterIdUsuario()
@@ -64,11 +66,11 @@ namespace DispenserTCC.Objetos
             MySqlCommand cmd = new MySqlCommand("SELECT MAX(Id) from Usuarios", conn);
 
             MySqlDataReader dr = cmd.ExecuteReader();
-
             int id = 0;
             while (dr.Read())
             {
-                if(dr.FieldCount == 0)
+                var retorno = dr.GetValue(0).ToString();
+                if (String.IsNullOrEmpty(retorno))
                 {
                     id = 0;
                 }
@@ -77,6 +79,8 @@ namespace DispenserTCC.Objetos
                     id = dr.GetInt32(0);
                 }
             }
+
+            conn.Close();
 
             return id + 1;
         }

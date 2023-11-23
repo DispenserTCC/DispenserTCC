@@ -1,5 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Configuracoes.aspx.cs" Inherits="DispenserTCC.Configuracoes" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Configuracoes.aspx.cs" Inherits="DispenserTCC.Configuracoes" MasterPageFile="~/Site.Master" %>
 
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -16,10 +17,10 @@
           <label for="username">Nome: </label>
             <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
         </div>
-        <div class="form-group">
+        <%--<div class="form-group">
           <label for="username">Digite qual o dispenser: </label>
             <asp:TextBox ID="txtDispenser" runat="server" Placeholder="1, 2, 3 ou 4"></asp:TextBox>
-        </div>
+        </div>--%>
         <div class="form-group">
           <label for="username">Nome do medicamento: </label>
            <asp:TextBox ID="txtMedicamento" runat="server" Placeholder="Ex: Dorflex"></asp:TextBox>
@@ -27,6 +28,14 @@
         <div class="form-group">
           <label for="username">Quantidade: </label>
            <asp:TextBox ID="txtQuantidade" runat="server" Placeholder="Total:"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="username">Intervalo(em horas): </label>
+            <asp:TextBox ID="txtIntervalo" runat="server" Placeholder=""></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="username">Por quantos dias: </label>
+            <asp:TextBox ID="txtQtdDias" runat="server" Placeholder="Ex: 5"></asp:TextBox>
         </div>
         <div class="form-group">
           <label for="username">Data:</label>
@@ -44,3 +53,4 @@
     </div>
   </body>
 </html>
+</asp:Content>

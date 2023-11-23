@@ -22,7 +22,7 @@ namespace DispenserTCC
 
             if (!String.IsNullOrEmpty(nome))
             {
-                Response.Redirect("Configuracoes.aspx");
+                Response.Redirect("Home.aspx");
             }
         }
 

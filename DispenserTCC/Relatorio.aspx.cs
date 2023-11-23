@@ -13,5 +13,10 @@ namespace DispenserTCC
         {
 
         }
+
+        protected void btnGerarRelatorio_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Relatorio.aspx");
+        }
     }
 }
