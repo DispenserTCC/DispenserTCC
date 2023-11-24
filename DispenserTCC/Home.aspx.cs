@@ -19,7 +19,7 @@ namespace DispenserTCC
             Response.Redirect("Relatorio.aspx");
         }
         
-        protected void btnProgramarDispensador_Click(object sender, EventArgs e)
+        protected void btnDispenser_Click(object sender, EventArgs e)
         {
             Response.Redirect("Configuracoes.aspx");
         }

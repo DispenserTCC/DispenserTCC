@@ -18,9 +18,9 @@
         </div>
         <asp:Button id="btnRelatorio" CssClass="login-button" OnClick="btnRelatorio_Click" runat="server" text="Gerar Relatório"/>
         <p></p>
-        <asp:Button id="btnDispenser" CssClass="login-button" OnClick="btnDispenser_Click" runat="server" text="Escolher Dispenser"/>
+        <asp:Button id="btnDispenser" CssClass="login-button" OnClick="btnDispenser_Click" runat="server" text="Configurar Dispenser"/>
         <p></p>
-        <asp:Button id="btnSair" CssClass="login-button" OnClick="btnSair_Click" runat="server" text="Sair"/>
+        <asp:Button id="btnSair" CssClass="login-button" OnClick="btnLogout_Click" runat="server" text="Sair"/>
       </form>
     </div>
   </body>
