@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="CSS/Estilo.css" />
         <style></style>
       </head>
-      <body>
+      <body style="background: url(img/back.jpg); background-repeat:no-repeat">
         <div class="login-container">
           <h2>Login</h2>
             <img src="img/azul.png" class="usuario" alt="60px" height="60px"/>
