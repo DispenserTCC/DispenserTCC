@@ -195,7 +195,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
-    <Content Include="img\login.jpeg" />
+    <Content Include="img\azul.png" />
+    <Content Include="img\Back.png" />
     <Content Include="Login.aspx" />
     <Content Include="PaginaInicial.aspx" />
     <Content Include="Relatorio.aspx" />

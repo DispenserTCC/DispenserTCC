@@ -13,7 +13,7 @@
       <body>
         <div class="login-container">
           <h2>Login</h2>
-            <img src="img/login.jpeg" />
+            <img src="img/azul.png" class="usuario" alt="60px" height="60px"/>
           <form action="process_login.php" method="POST">
             <div class="form-group">
               <label for="username">Email:</label>
