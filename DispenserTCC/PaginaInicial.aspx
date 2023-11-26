@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="CSS/Estilo.css" />
         <style></style>
       </head>
-      <body style="background: url(img/Paginainicial.jpg); background-size: cover; background-repeat: no-repeat">
+      <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
         <div class="welcome-container">
           <h1>Seja bem-vindo ao nosso site</h1>
           <p>Primeiro acesso? clique no botão abaixo para se cadastrar!!!</p>
