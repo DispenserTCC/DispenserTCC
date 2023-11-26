@@ -9,7 +9,7 @@
     <title>Config. Dispenser</title>
     <link rel="stylesheet" href="CSS/Estilo.css" />
   </head>
-  <body>
+  <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
     <div class="login-container">
       <h2>Configurações</h2>
       <form action="process_login.php" method="POST">
