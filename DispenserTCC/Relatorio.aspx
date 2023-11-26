@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="CSS/Estilo.css" />
   </head>
   <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
-    <div class="login-container">
+     <div><asp:Button id="btnSair" CssClass="exit" OnClick="btnLogout_Click" runat="server" text="Sair"/></div>
       <h2>Gerar Relatório</h2>
       <form action="process_login.php" method="POST">
         <div class="form-group">

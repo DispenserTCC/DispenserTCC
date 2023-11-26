@@ -7,10 +7,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paciente ou Médico</title>
-    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="CSS/Estilo.css" />
   </head>
   <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
-    <div class="login-container">
+    <div><asp:Button id="btnSair" CssClass="exit" OnClick="btnLogout_Click" runat="server" text="Sair"/></div>
       <h2>Menu de opções:</h2>
       <form action="process_login.php" method="POST">
         <div class="form-group">
@@ -19,8 +19,6 @@
         <asp:Button id="btnRelatorio" CssClass="login-button" OnClick="btnRelatorio_Click" runat="server" text="Gerar Relatório"/>
         <p></p>
         <asp:Button id="btnDispenser" CssClass="login-button" OnClick="btnDispenser_Click" runat="server" text="Configurar Dispenser"/>
-        <p></p>
-        <asp:Button id="btnSair" CssClass="login-button" OnClick="btnLogout_Click" runat="server" text="Sair"/>
       </form>
     </div>
   </body>
