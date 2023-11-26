@@ -197,7 +197,10 @@
     <Content Include="Home.aspx" />
     <Content Include="img\azul.png" />
     <Content Include="img\back.jpg" />
+    <Content Include="img\Cadastro.jpg" />
+    <Content Include="img\Configuracoes.jpg" />
     <Content Include="img\medicamentos.jpg" />
+    <Content Include="img\Paginainicial.jpg" />
     <Content Include="Login.aspx" />
     <Content Include="PaginaInicial.aspx" />
     <Content Include="Relatorio.aspx" />

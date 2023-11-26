@@ -9,7 +9,7 @@
     <title>Paciente ou Médico</title>
     <link rel="stylesheet" href="estilo.css" />
   </head>
-  <body>
+  <body style="background: url(img/back.jpg); background-size: cover;">
     <div class="login-container">
       <h2>Menu de opções:</h2>
       <form action="process_login.php" method="POST">

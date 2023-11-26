@@ -6,10 +6,6 @@
     padding: 0;
 }
 
-    body::after {
-        background:url('img\Back.png');
-    }
-
 .login-container {
     max-width: 400px;
     margin: 100px auto;

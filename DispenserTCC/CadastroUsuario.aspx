@@ -9,7 +9,7 @@
         <title>Cadastro</title>
         <link rel="stylesheet" href="CSS/Estilo.css" />
       </head>
-      <body>
+      <body style="background: url(img/Cadastro.jpg); background-size: cover;">
         <div class="login-container">
           <h2>Cadastro do Usuário</h2>
           <form action="process_login.php" method="POST">

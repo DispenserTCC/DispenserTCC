@@ -9,7 +9,7 @@
     <title>Config. Dispenser</title>
     <link rel="stylesheet" href="CSS/Estilo.css" />
   </head>
-  <body>
+  <body style="background: url(img/Configuracoes.jpg); background-size: cover;">  
     <div class="login-container">
       <h2>Configurações</h2>
       <form action="process_login.php" method="POST">
@@ -17,10 +17,10 @@
           <label for="username">Nome: </label>
             <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
         </div>
-        <%--<div class="form-group">
+        <div class="form-group">
           <label for="username">Digite qual o dispenser: </label>
             <asp:TextBox ID="txtDispenser" runat="server" Placeholder="1, 2, 3 ou 4"></asp:TextBox>
-        </div>--%>
+        </div>
         <div class="form-group">
           <label for="username">Nome do medicamento: </label>
            <asp:TextBox ID="txtMedicamento" runat="server" Placeholder="Ex: Dorflex"></asp:TextBox>
