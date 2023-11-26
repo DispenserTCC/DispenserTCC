@@ -14,10 +14,9 @@
       <h2>Gerar Relatório</h2>
       <form action="process_login.php" method="POST">
         <div class="form-group">
-          <label for="username">
-              Para gerar o relatório atualizado clique no botão abaixo:</label>
+          <label style="text-align: center" for="username">Para gerar o relatório atualizado clique no botão abaixo:</label>
         </div>
-          <asp:Button id="btnGerarRelatorio" CssClass="menu1" OnClick="btnGerarRelatorio_Click" runat="server" text="Baixar Relatório"/>
+          <asp:Button id="btnGerarRelatorio" CssClass="login-button" OnClick="btnGerarRelatorio_Click" runat="server" text="Baixar Relatório"/>
       </form>
     </div>
   </body>

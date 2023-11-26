@@ -11,7 +11,7 @@
   </head>
   <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
     <div><asp:Button id="btnSair" CssClass="exit" OnClick="btnLogout_Click" runat="server" text="Sair"/></div>
-      <h2>Menu de opções:</h2>
+      <h3>Menu de opções:</h3>
       <form action="process_login.php" method="POST">
         <div class="form-group">
           <label for="username"></label>
