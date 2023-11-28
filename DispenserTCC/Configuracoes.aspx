@@ -19,10 +19,6 @@
             <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
         </div>
         <div class="form-group">
-          <label for="username">Digite qual o dispenser: </label>
-            <asp:TextBox ID="txtDispenser" runat="server" Placeholder="1, 2, 3 ou 4"></asp:TextBox>
-        </div>
-        <div class="form-group">
           <label for="username">Nome do medicamento: </label>
            <asp:TextBox ID="txtMedicamento" runat="server" Placeholder="Ex: Dorflex"></asp:TextBox>
         </div>
