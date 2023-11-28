@@ -11,7 +11,7 @@ namespace DispenserTCC.Objetos
     {
         #region prop
         public int Id { get; set; }
-        public int Nome { get; set; }
+        public string Nome { get; set; }
         public string Medicamento { get; set; }
         public int Quantidade { get; set; }
         public DateTime DatPrescricao { get; set; }
