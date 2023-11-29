@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/DispenserTCC/Web.config
+/DispenserTCC/Web.config
