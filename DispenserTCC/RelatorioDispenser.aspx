@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="CSS/Estilo.css" />
   </head>
   <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
+    <div><asp:Button id="btnvoltar" CssClass="back" OnClick="btnLogout_Click" runat="server" text="Voltar ao Menu"/></div>
      <div><asp:Button id="btnSair" CssClass="exit" OnClick="btnLogout_Click" runat="server" text="Sair"/></div>
-      <h2>Gerar Relatório</h2>
+      <h3>Gerar Relatório</h3>
       <form action="process_login.php" method="POST">
         <div class="form-group">
           <label style="text-align: center" for="username">Para gerar o relatório atualizado clique no botão abaixo:</label>
