@@ -24,23 +24,23 @@
         </div>
         <div class="form-group">
           <label for="username">Quantidade: </label>
-           <asp:TextBox ID="txtQuantidade" runat="server" Placeholder="Total:"></asp:TextBox>
+           <asp:TextBox ID="txtQuantidade" TextMode="Number" runat="server" Placeholder="Total:"></asp:TextBox>
         </div>
         <div class="form-group">
             <label for="username">Intervalo(em horas): </label>
-            <asp:TextBox ID="txtIntervalo" runat="server" Placeholder=""></asp:TextBox>
+            <asp:TextBox ID="txtIntervalo" TextMode="Number" runat="server" Placeholder=""></asp:TextBox>
         </div>
         <div class="form-group">
             <label for="username">Por quantos dias: </label>
-            <asp:TextBox ID="txtQtdDias" runat="server" Placeholder="Ex: 5"></asp:TextBox>
+            <asp:TextBox ID="txtQtdDias" TextMode="Number" runat="server" Placeholder="Ex: 5"></asp:TextBox>
         </div>
         <div class="form-group">
           <label for="username">Data:</label>
-            <asp:TextBox ID="txtData_prescricao" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtData_prescricao" TextMode="Date" runat="server"></asp:TextBox>
         </div>
         <div class="form-group">
           <label for="username">Hora:</label>
-            <asp:TextBox ID="txtHora_prescricao" runat="server" ></asp:TextBox>
+            <asp:TextBox ID="txtHora_prescricao" TextMode="Time" runat="server" ></asp:TextBox>
         </div>
         <div>
           <asp:Button id="btnSalvar" CssClass="login-button" OnClick="btnSalvar_Click" runat="server" text="Feito"/>

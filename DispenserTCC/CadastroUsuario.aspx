@@ -23,15 +23,15 @@
             </div>
             <div class="form-group">
               <label for="phone">Número de telefone:</label>
-                <asp:TextBox ID="txtNumTelefone" runat="server" Placeholder="(XX) X.XXXX-XXXX"></asp:TextBox>
+                <asp:TextBox ID="txtNumTelefone" runat="server" TextMode="Phone" Placeholder="(XX) X.XXXX-XXXX"></asp:TextBox>
             </div>
             <div class="form-group">
               <label for="phone">Email:</label>
-                <asp:TextBox ID="txtEmail" runat="server" Placeholder="EX:seuemail@gmail.com"></asp:TextBox>
+                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" Placeholder="EX:seuemail@gmail.com"></asp:TextBox>
             </div>
             <div class="form-group">
               <label for="password">Senha:</label>
-                <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtSenha" TextMode="Password" runat="server"></asp:TextBox>
             </div>
             <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Criar Usuário"/>
           </form>

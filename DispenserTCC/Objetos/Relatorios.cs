@@ -39,7 +39,8 @@ namespace DispenserTCC.Objetos
                     Medicamento = reader.GetString(2),
                     Quantidade = reader.GetInt32(3),
                     DatPrescricao = reader.GetDateTime(4),
-                    HoraPrescricao = reader.GetValue(5).ToString()
+                    HoraPrescricao = reader.GetValue(5).ToString(),
+                    Dispensado = reader.GetInt32(6)
                 });
             }
 

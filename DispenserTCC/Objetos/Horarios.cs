@@ -16,6 +16,7 @@ namespace DispenserTCC.Objetos
         public int Quantidade { get; set; }
         public DateTime DatPrescricao { get; set; }
         public string HoraPrescricao { get; set; }
+        public int Dispensado { get; set; }
         #endregion
 
         #region ConnectionStrings
@@ -47,7 +48,8 @@ namespace DispenserTCC.Objetos
             int id = 0;
             while (dr.Read())
             {
-                if (dr.FieldCount == 0)
+                var retorno = dr.GetValue(0).ToString();
+                if (String.IsNullOrEmpty(retorno))
                 {
                     id = 0;
                 }

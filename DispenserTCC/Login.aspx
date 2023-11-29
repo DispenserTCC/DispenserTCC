@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
               <label for="password">Senha:</label>
-                <asp:TextBox ID="txtSenha" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtSenha" TextMode="Password" runat="server"></asp:TextBox>
             </div>
               <asp:Button id="btnEntrar" CssClass="login-button" OnClick="btnEntrar_Click" runat="server" text="Entrar"/>
               <asp:Button id="btnCadastrar" CssClass="login-button" OnClick="btnCadastrar_Click" runat="server" text="Cadastre-se"/>
