@@ -47,6 +47,7 @@ namespace DispenserTCC
                     obj.InserirHorario(txtNome.Text, txtMedicamento.Text, Convert.ToInt32(txtQuantidade.Text), dataPrescricao.Split(' ').FirstOrDefault(), horaPrescricao, 0);
                 }
             }
+            Response.Redirect("Home.aspx");
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
