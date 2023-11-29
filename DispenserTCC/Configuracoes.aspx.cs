@@ -32,6 +32,17 @@ namespace DispenserTCC
                 !String.IsNullOrEmpty(txtData_prescricao.Text) &&
                 !String.IsNullOrEmpty(txtHora_prescricao.Text))
             {
+                if (!String.IsNullOrEmpty(txtData_prescricao.Text))
+                {
+                    dataPrescricao = Convert.ToDateTime(dataPrescricao).ToString("yyyy-MM-dd HH:mm:ss");
+                }
+                if (!String.IsNullOrEmpty(txtHora_prescricao.Text))
+                {
+                    horaPrescricao = Convert.ToDateTime(horaPrescricao).ToString("HH:mm");
+                }
+                obj.InserirHorario(txtNome.Text, txtMedicamento.Text, Convert.ToInt32(txtQuantidade.Text), dataPrescricao.Split(' ').FirstOrDefault(), horaPrescricao, 0);
+
+
                 for (int i = 0; i < qtdTotal; i++)
                 {
                     if (!String.IsNullOrEmpty(txtData_prescricao.Text))
