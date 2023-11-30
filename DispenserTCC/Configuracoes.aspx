@@ -23,7 +23,7 @@
         </div>
         <div class="form-group">
           <label for="username">Nome do medicamento: </label>
-            <asp:DropDownList id="ddlMedicamento" Runat="Server">
+            <asp:DropDownList id="ddlMedicamento" Runat="Server" CssClass="form-group">
               <asp:ListItem Text="Azul" Value="Azul"/>
               <asp:ListItem Text="Vermelho" Value="Vermelho"/>
               <asp:ListItem Text="Verde" Value="Verde"/>
