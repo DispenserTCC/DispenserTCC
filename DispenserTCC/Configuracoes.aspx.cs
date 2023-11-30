@@ -27,7 +27,7 @@ namespace DispenserTCC
             string horaPrescricao = txtHora_prescricao.Text;
 
             if (!String.IsNullOrEmpty(txtNome.Text) && 
-                !String.IsNullOrEmpty(txtMedicamento.Text) && 
+                !String.IsNullOrEmpty(ddlMedicamento.SelectedValue) && 
                 !String.IsNullOrEmpty(txtQuantidade.Text) &&
                 !String.IsNullOrEmpty(txtData_prescricao.Text) &&
                 !String.IsNullOrEmpty(txtHora_prescricao.Text))
@@ -40,22 +40,24 @@ namespace DispenserTCC
                 {
                     horaPrescricao = Convert.ToDateTime(horaPrescricao).ToString("HH:mm");
                 }
-                obj.InserirHorario(txtNome.Text, txtMedicamento.Text, Convert.ToInt32(txtQuantidade.Text), dataPrescricao.Split(' ').FirstOrDefault(), horaPrescricao, 0);
+                obj.InserirHorario(txtNome.Text, ddlMedicamento.SelectedValue, Convert.ToInt32(txtQuantidade.Text), dataPrescricao.Split(' ').FirstOrDefault(), horaPrescricao, 0);
 
-
-                for (int i = 0; i < qtdTotal; i++)
+                if(qtdTotal > 1)
                 {
-                    if (!String.IsNullOrEmpty(txtData_prescricao.Text))
+                    for (int i = 0; i < qtdTotal; i++)
                     {
-                        dataPrescricao = Convert.ToDateTime(dataPrescricao).AddHours(intervalo).ToString("yyyy-MM-dd HH:mm:ss");
-                    }
-                    if (!String.IsNullOrEmpty(txtHora_prescricao.Text))
-                    {
-                        horaPrescricao = Convert.ToDateTime(horaPrescricao).AddHours(intervalo).ToString("HH:mm");
-                    }
+                        if (!String.IsNullOrEmpty(txtData_prescricao.Text))
+                        {
+                            dataPrescricao = Convert.ToDateTime(dataPrescricao).AddHours(intervalo).ToString("yyyy-MM-dd HH:mm:ss");
+                        }
+                        if (!String.IsNullOrEmpty(txtHora_prescricao.Text))
+                        {
+                            horaPrescricao = Convert.ToDateTime(horaPrescricao).AddHours(intervalo).ToString("HH:mm");
+                        }
 
-                    
-                    obj.InserirHorario(txtNome.Text, txtMedicamento.Text, Convert.ToInt32(txtQuantidade.Text), dataPrescricao.Split(' ').FirstOrDefault(), horaPrescricao, 0);
+
+                        obj.InserirHorario(txtNome.Text, ddlMedicamento.SelectedValue, Convert.ToInt32(txtQuantidade.Text), dataPrescricao.Split(' ').FirstOrDefault(), horaPrescricao, 0);
+                    }
                 }
             }
             Response.Redirect("Home.aspx");

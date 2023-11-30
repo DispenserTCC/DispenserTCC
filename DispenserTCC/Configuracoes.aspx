@@ -23,7 +23,11 @@
         </div>
         <div class="form-group">
           <label for="username">Nome do medicamento: </label>
-           <asp:TextBox ID="txtMedicamento" runat="server" Placeholder="Ex: Dorflex"></asp:TextBox>
+            <asp:DropDownList id="ddlMedicamento" Runat="Server">
+              <asp:ListItem Text="Azul" Value="Azul"/>
+              <asp:ListItem Text="Vermelho" Value="Vermelho"/>
+              <asp:ListItem Text="Verde" Value="Verde"/>
+            </asp:DropDownList>
         </div>
         <div class="form-group">
           <label for="username">Quantidade: </label>
