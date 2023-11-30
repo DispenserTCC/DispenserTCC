@@ -115,5 +115,10 @@ namespace DispenserTCC
         {
             Response.Redirect("Login.aspx");
         }
+
+        protected void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
+        }
     }
 }

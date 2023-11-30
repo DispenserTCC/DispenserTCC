@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="CSS/Estilo.css" />
   </head>
   <body style="background: url(img/medicamentos.jpg); background-repeat:no-repeat; background-size:cover;">
-    <div><asp:Button id="btnSair" CssClass="exit" OnClick="btnLogout_Click" runat="server" text="Sair"/></div>
+    <div class="container">
+        <asp:Button id="btnvoltar" CssClass="back" OnClick="btnVoltar_Click" runat="server" text="Voltar ao Menu"/>
+        <asp:Button id="btnSair" CssClass="exit" OnClick="btnLogout_Click" runat="server" text="Sair"/>
+    </div>
     <div class="login-container">
       <h2>Configurações</h2>
       <form action="process_login.php" method="POST">
